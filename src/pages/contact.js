@@ -1,10 +1,13 @@
-import React from "react"
+import React from 'react'
 
 export default function AboutPage() {
   return (
     <>
       <h1>Contact</h1>
-      <p>I'm still working on this page. Come back later for updates.</p>
+      <p>
+        Please see my contact information on my personal website{' '}
+        <a href="https://www.jasonross.dev">here</a>.
+      </p>
     </>
   )
 }

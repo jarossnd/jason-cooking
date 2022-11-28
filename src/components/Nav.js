@@ -53,10 +53,11 @@ const NavBar = styled.nav`
     .menu {
       display: none;
   }
-  .logo {
+
+  .logo a {
     font-size: 4rem;
-    color: var(--tan);
   }
+
 `
 
 const MenuIcon = styled.button`
