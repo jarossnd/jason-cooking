@@ -5,7 +5,7 @@ date: 2022-04-19
 author: "Jason Ross"
 ---
 
-A Texas BBQ sauce that goes good with pulled pork or a brisket.
+A Rib Rub for BBQ ribs.
 
 ## Ingredients
 
