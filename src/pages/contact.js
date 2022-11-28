@@ -1,8 +1,10 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 export default function AboutPage() {
   return (
     <>
+      <SEO title="Contact" />
       <h1>Contact</h1>
       <p>
         Please find my contact information on my personal website{' '}

@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Bio from "../components/bio"
-import Seo from "../components/seo"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
+import Bio from '../components/bio'
+import Seo from '../components/seo'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -23,8 +23,8 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <div location={location} title={siteTitle}>
+      <SEO title="Recipes" />
       <h1>Latest Recipes</h1>
-      <Seo title="All posts" />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

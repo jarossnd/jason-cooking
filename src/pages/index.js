@@ -6,7 +6,7 @@ import kebabCase from 'lodash/kebabCase'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
 const HomeStyles = styled.div`
   .menu {
@@ -52,7 +52,7 @@ const HomePage = ({
   },
 }) => (
   <>
-    <SEO title="Jason's Cookbook" />
+    <SEO title="Home" />
     <div className="item1">
       <HomeStyles>
         <h1>Welcome</h1>

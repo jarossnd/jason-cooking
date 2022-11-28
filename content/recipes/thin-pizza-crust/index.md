@@ -5,7 +5,9 @@ date: 2022-04-23
 author: "Jason Ross"
 ---
 
-A thin pizza crust
+This thin-crust pizza dough recipe is ready to bake in just 15 minutes with deliciously crisp results.
+
+![An image of thin pizza crust](/thin-pizza-crust.webp)
 
 ## Ingredients
 
@@ -21,3 +23,11 @@ A thin pizza crust
 2. Mix 1 3/4 cup flour and salt in a large bowl. Pour in yeast mixture; mix well until dough comes together.
 3. Transfer dough to a floured surface and knead until smooth, adding remaining 1/4 cup flour if dough is too sticky, about 2 minutes. Roll dough into a 12-inch circle. Transfer to a greased pizza pan.
 4. Top crust as desired and bake at 500 degrees F (260 degrees C) until golden, 8 to 10 minutes.
+
+## Notes
+
+- Prep Time: 10 min
+- Additional Time: 4 mins
+- Total Time: 15 mins
+- Servings: 4
+- Yield: 1 12-inch crust

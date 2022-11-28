@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import imgLogo from '../images/jason-cooking-logo.svg'
 
 const NavBar = styled.nav`
   .top-nav {
@@ -145,7 +146,13 @@ const Nav = () => {
       <NavBar>
         <section className="top-nav">
           <div className="logo">
-            <Link to="/">📖 Jason's Cookbook</Link>
+            <img
+              src={imgLogo}
+              alt="Jason Cookbook Logo"
+              width="30"
+              height="30"
+            />{' '}
+            <Link to="/">Jason's Cookbook</Link>
           </div>
           <ul className="menu">
             <li>

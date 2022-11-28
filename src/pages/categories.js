@@ -6,10 +6,15 @@ import kebabCase from 'lodash/kebabCase'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
+import SEO from '../components/SEO'
 
 const TopicStyles = styled.div`
   a {
     font-size: 3rem;
+  }
+  ul {
+    list-style-type: none;
+    text-align: center;
   }
 `
 
@@ -22,7 +27,7 @@ const TagsPage = ({
   },
 }) => (
   <>
-    <Helmet title={title} />
+    <SEO title="Categories" />
     <div className="item1">
       <h1>Categories</h1>
       <TopicStyles>

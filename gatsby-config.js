@@ -16,6 +16,7 @@ module.exports = {
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://www.jason.cooking`,
+    twitter: `@jarossnd`,
     social: {
       twitter: `jarossnd`,
     },

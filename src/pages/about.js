@@ -1,8 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
+import SEO from '../components/SEO'
+import imgJason from '../images/profile-pic.png'
+
+const AboutStyles = styled.div`
+  .profilePic {
+    margin: auto;
+    display: block;
+  }
+`
 
 export default function AboutPage() {
   return (
-    <>
+    <AboutStyles>
+      <SEO title="About" />
       <h1>About</h1>
       <p>
         Thank you for visiting my cookbook. I enjoy cooking and creating
@@ -14,6 +25,7 @@ export default function AboutPage() {
         more recipes that I have published. This website was created using
         GatsbyJS and is hosted with Gatsby Cloud.
       </p>
-    </>
+      <img className="profilePic" src={imgJason} alt="Jason Ross" />
+    </AboutStyles>
   )
 }
