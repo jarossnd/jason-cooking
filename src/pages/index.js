@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 // Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import SEO from "../components/seo"
+import { Helmet } from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import SEO from '../components/seo'
 
 const HomeStyles = styled.div`
   .menu {
@@ -24,7 +24,7 @@ const HomeStyles = styled.div`
     border-radius: 10px;
     padding: 10px;
     color: var(--orange);
-    background-color: var(--white);
+    background-color: var(--blue);
   }
   .menu > li:hover {
     margin: 15px;
@@ -36,7 +36,10 @@ const HomeStyles = styled.div`
   }
   .menu a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
+  }
+  .menu a:hover {
+    color: var(--orange);
   }
 `
 
@@ -52,7 +55,7 @@ const HomePage = ({
     <SEO title="Jason's Cookbook" />
     <div className="item1">
       <HomeStyles>
-        <h1>Home</h1>
+        <h1>Welcome</h1>
         <p>
           Welcome to my cookbook! Feel free to browse around and look at my
           collection of recipes.

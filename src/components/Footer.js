@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const FooterStyles = styled.div`
   padding-left: 5rem;
@@ -9,7 +9,7 @@ const FooterStyles = styled.div`
 
   footer p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .footerSmall {
     font-size: 1rem;

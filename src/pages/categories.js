@@ -1,13 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 // Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
+import { Helmet } from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
-const TopicStyles = styled.div``
+const TopicStyles = styled.div`
+  a {
+    font-size: 3rem;
+  }
+`
 
 const TagsPage = ({
   data: {
@@ -27,7 +31,7 @@ const TagsPage = ({
             {group.map(tag => (
               <li key={tag.fieldValue}>
                 <Link to={`/categories/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue}{" "}
+                  {tag.fieldValue}{' '}
                 </Link>
                 ({tag.totalCount})
               </li>

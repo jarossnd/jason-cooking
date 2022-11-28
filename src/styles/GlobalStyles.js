@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -26,13 +26,11 @@ const GlobalStyles = createGlobalStyle`
         text-align: center;
     }
     a {
-        color: var(--orange);
+        color: var(--black);
         text-decoration: none;
     }
     a:hover {
-        border-bottom: 3px solid var(--orange);
-        border-color: var(--orange);
-        border-bottom-color: var(--orange);
+        color: var(--orange);
     }
 
     footer {

@@ -1,6 +1,6 @@
 ---
 title: Thin Pizza Crust
-tags: ['Italian', 'Pizza', 'Dough']
+tags: ["Italian", "Pizza", "Dough"]
 date: 2022-04-23
 author: "Jason Ross"
 ---

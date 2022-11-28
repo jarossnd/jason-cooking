@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import Footer from "./Footer"
-import "normalize.css"
-import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
-import GlobalStyles from "../styles/GlobalStyles"
-import Nav from "./Nav"
+import React from 'react'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
+import Footer from './Footer'
+import 'normalize.css'
+import GlobalStyles from '../styles/GlobalStyles'
+import Nav from './Nav'
 
 const WrapperStyles = styled.div`
   /* For mobile device overflow since mobile devices do no honor the body tag */
@@ -36,13 +36,7 @@ const ContentStyles = styled.div`
     padding: 1rem;
     flex: 50%;
   }
-  .yellow-box {
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--yellow);
-    border-radius: 15px;
-    padding: 1rem;
-  }
+
   @media screen and (max-width: 760px) {
     .flex-container {
       flex-direction: column;

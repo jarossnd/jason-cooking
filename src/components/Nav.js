@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const NavBar = styled.nav`
   .top-nav {
@@ -28,6 +28,7 @@ const NavBar = styled.nav`
 
     :hover {
       color: var(--orange);
+      text-decoration: none;
     }
   }
 
@@ -51,6 +52,10 @@ const NavBar = styled.nav`
   @media screen and (max-width: 760px) {
     .menu {
       display: none;
+  }
+  .logo {
+    font-size: 4rem;
+    color: var(--tan);
   }
 `
 
@@ -78,15 +83,15 @@ const MenuIcon = styled.button`
     transition: opacity 300ms, transform 300ms;
 
     :first-child {
-      transform: ${({ nav }) => (nav ? "rotate(45deg);" : "rotate(0)")};
+      transform: ${({ nav }) => (nav ? 'rotate(45deg);' : 'rotate(0)')};
     }
 
     :nth-child(2) {
-      opacity: ${({ nav }) => (nav ? "0" : "1")};
+      opacity: ${({ nav }) => (nav ? '0' : '1')};
     }
 
     :nth-child(3) {
-      transform: ${({ nav }) => (nav ? "rotate(-45deg);" : "rotate(0)")};
+      transform: ${({ nav }) => (nav ? 'rotate(-45deg);' : 'rotate(0)')};
     }
   }
   @media screen and (max-width: 760px) {
@@ -107,7 +112,7 @@ const MenuLinks = styled.nav`
   top: 0;
   right: 0;
   transition: transform 300ms;
-  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ nav }) => (nav ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 1024;
 
   ul {
@@ -126,6 +131,7 @@ const MenuLinks = styled.nav`
 
     :hover {
       color: var(--orange);
+      text-decoration: none;
     }
   }
 `
@@ -138,7 +144,7 @@ const Nav = () => {
       <NavBar>
         <section className="top-nav">
           <div className="logo">
-            <Link to="/">Jason's Cookbook</Link>
+            <Link to="/">📖 Jason's Cookbook</Link>
           </div>
           <ul className="menu">
             <li>
