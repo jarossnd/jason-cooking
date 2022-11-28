@@ -1,10 +1,6 @@
-// custom typefaces
-import "@fontsource/montserrat/variable.css"
-import "@fontsource/merriweather"
-// normalize CSS across browsers
-import "./src/normalize.css"
-// custom CSS styles
-import "./src/style.css"
+import React from "react"
+import Layout from "./src/components/Layout"
 
-// Highlighting for code blocks
-import "prismjs/themes/prism.css"
+export function wrapPageElement({ element, props }) {
+  return <Layout {...props}>{element}</Layout>
+}

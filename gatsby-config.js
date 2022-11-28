@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Jason Ross Cookbook`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jason Ross`,
+      summary: `who lives and works in Fargo, ND building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://www.jason.cooking`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `jarossnd`,
     },
   },
   plugins: [
@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/recipes`,
+        name: `recipes`,
       },
     },
     {
@@ -58,6 +58,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -87,8 +88,13 @@ module.exports = {
               })
             },
             query: `{
-              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+			   
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
                 nodes {
+				   
+						 
                   excerpt
                   html
                   fields {
@@ -97,12 +103,13 @@ module.exports = {
                   frontmatter {
                     title
                     date
+					 
                   }
                 }
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Jason Ross Cookbook RSS Feed",
           },
         ],
       },
@@ -110,7 +117,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Jason Ross Cookbook`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,

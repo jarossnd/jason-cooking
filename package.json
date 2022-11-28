@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "jason-cooking",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Jason Ross Cookbook",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jason Ross <jason@jasonross.xyz>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jarossnd/jason-cooking/issues"
   },
   "dependencies": {
     "@fontsource/merriweather": "^4.5.14",
@@ -21,21 +21,24 @@
     "gatsby-source-filesystem": "^5.2.0",
     "gatsby-transformer-remark": "^6.2.0",
     "gatsby-transformer-sharp": "^5.2.0",
+    "normalize.css": "^8.0.1",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/jarossnd/jason-cooking#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/jarossnd/jason-cooking.git"
   },
   "scripts": {
     "build": "gatsby build",
