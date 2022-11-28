@@ -57,8 +57,8 @@ const HomePage = ({
       <HomeStyles>
         <h1>Welcome</h1>
         <p>
-          Welcome to my cookbook! Feel free to browse around and look at my
-          collection of recipes.
+          Welcome to Jason's Cookbook! Select a category below to explore
+          recipes.
         </p>
         <div className="container">
           <ul className="menu">

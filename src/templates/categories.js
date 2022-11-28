@@ -1,28 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 // Components
-import { Link, graphql } from 'gatsby';
-import styled from 'styled-components';
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
-const TopicStyles = styled.div``;
+const TopicStyles = styled.div``
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
-  const tagTitle = `${tag}`;
-  const tagCount = `${totalCount}`;
+  const { tag } = pageContext
+  const { edges, totalCount } = data.allMarkdownRemark
+  const tagTitle = `${tag}`
+  const tagCount = `${totalCount}`
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`;
+  } tagged with "${tag}"`
   return (
     <div className="item1">
-      <h1>Recipe Category: {tagTitle}</h1>
+      <h1>{tagTitle}</h1>
       <ol style={{ listStyle: `none` }}>
         {edges.map(({ node }) => {
-          const { slug } = node.fields;
-          const { title } = node.frontmatter;
-          const { date } = node.frontmatter;
-          const { description } = node.frontmatter;
+          const { slug } = node.fields
+          const { title } = node.frontmatter
+          const { date } = node.frontmatter
+          const { description } = node.frontmatter
           return (
             <li key={slug}>
               <TopicStyles>
@@ -34,7 +34,7 @@ const Tags = ({ pageContext, data }) => {
                 </section>
               </TopicStyles>
             </li>
-          );
+          )
         })}
       </ol>
       {/*
@@ -42,8 +42,8 @@ const Tags = ({ pageContext, data }) => {
               You'll come back to it!
             */}
     </div>
-  );
-};
+  )
+}
 Tags.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
@@ -65,8 +65,8 @@ Tags.propTypes = {
       ),
     }),
   }),
-};
-export default Tags;
+}
+export default Tags
 export const pageQuery = graphql`
   query ($tag: String) {
     allMarkdownRemark(
@@ -89,4 +89,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
