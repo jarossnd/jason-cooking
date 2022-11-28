@@ -1,25 +1,26 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
     :root {
         --tan: #FFECD1;
         --orange: #FF7D00;
         --black: #001524;
-        --blue: #15616D;
+        --blue: rgb(5, 68, 104);
         --red: #78290F;
         --white: #FFFFFF;
     }
     html {
         font-size 8px;
-        background-color: var(--white);
+        background-color: var(--tan);
     }
     body {
         font-family: 'Open Sans', sans-serif;
-        font-size: 2rem;
+        font-size: 3rem;
         color: var(--black);
         line-height: 1.5;
-        padding-right: 20px;
-        padding-left: 20px;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
     h1 {
         text-align: center;
@@ -33,6 +34,17 @@ const GlobalStyles = createGlobalStyle`
         border-color: var(--orange);
         border-bottom-color: var(--orange);
     }
-`;
 
-export default GlobalStyles;
+    footer {
+        padding: 5rem;
+        font-size: 5rem;
+        background-color: var(--tan);
+      }
+      footer p {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 400;
+      }
+`
+
+export default GlobalStyles

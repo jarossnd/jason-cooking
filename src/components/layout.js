@@ -5,139 +5,58 @@ import "normalize.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import GlobalStyles from "../styles/GlobalStyles"
+import Nav from "./Nav"
 
-const ContentStyles = styled.div`
+const WrapperStyles = styled.div`
+  /* For mobile device overflow since mobile devices do no honor the body tag */
+  overflow-x: hidden;
   position: relative;
-  width: 75%;
-  float: right;
-  height: 100vh;
-  h1 {
-    font-size: 4rem;
-    color: var(--black);
-    text-align: center;
-  }
-  h2 {
-    font-size: 3rem;
-    color: var(--black);
-  }
-  h3 {
-    font-size: 2rem;
-    color: var(--black);
-  }
-  p {
-    font-size: 2rem;
-  }
-  ul li {
-    font-size: 2rem;
-  }
-  ol li {
-    font-size: 2rem;
-  }
+  width: 100%;
 `
 
-const SideBarStyles = styled.div`
-  position: fixed;
-  background: rgb(5, 68, 104);
-  width: 25%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px 0;
-  transition: all 0.5s ease;
+const ContentStyles = styled.div`
+  padding-left: 3rem;
+  padding-right: 3rem;
   * {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
   }
-  .profile {
-    margin-bottom: 30px;
+  .flex-container {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1400px;
   }
-  .profile h3 {
-    color: #ffffff;
-    margin: 10px 0 5px;
+  .flex-item-left {
+    padding: 1rem;
+    flex: 50%;
   }
-  .profile p {
-    color: rgb(206, 240, 253);
-    font-size: 14px;
+  .flex-item-right {
+    padding: 1rem;
+    flex: 50%;
   }
-  .picture {
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto;
+  .yellow-box {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--yellow);
+    border-radius: 15px;
+    padding: 1rem;
   }
-  ul li a {
-    display: block;
-    padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
-    color: rgb(241, 237, 237);
-    font-size: 16px;
-    position: relative;
-  }
-  ul li a:hover,
-  ul li a.active {
-    color: #0c7db1;
-    background: white;
-    border-right: 2px solid rgb(5, 68, 104);
-  }
-  ul li a:hover:before,
-  ul li a.active:before {
-    display: block;
-  }
-  p {
-    color: var(--orange);
+  @media screen and (max-width: 760px) {
+    .flex-container {
+      flex-direction: column;
+    }
   }
 `
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <WrapperStyles>
       <GlobalStyles />
-      <SideBarStyles>
-        <div className="profile">
-          <StaticImage
-            className="picture"
-            layout="fixed"
-            formats={["auto", "webp", "avif"]}
-            src="../images/profile-pic.png"
-            width={100}
-            height={100}
-            quality={95}
-            alt="Profile picture"
-          />
-          <h3>Jason's Cookbook</h3>
-          <p>Dad Cook</p>
-          <br />
-          <ul>
-            <li>
-              <Link to="/">
-                <span className="item">Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/categories">
-                <span className="item">Categories</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about">
-                <span className="item">About</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact">
-                <span className="item">Contact</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </SideBarStyles>
+      <Nav />
       <ContentStyles>{children}</ContentStyles>
-    </div>
+      <Footer />
+    </WrapperStyles>
   )
 }
