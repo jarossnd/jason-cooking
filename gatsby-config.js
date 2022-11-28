@@ -22,12 +22,20 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/recipes`,
         name: `recipes`,
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
       },
     },
     {
