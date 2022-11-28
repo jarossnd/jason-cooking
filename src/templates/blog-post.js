@@ -1,7 +1,7 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import Seo from "../components/seo"
+import * as React from 'react'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import SEO from '../components/SEO'
 
 const RecipeStyle = styled.div``
 
@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <div location={location} title={siteTitle}>
-      <Seo
+      <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
