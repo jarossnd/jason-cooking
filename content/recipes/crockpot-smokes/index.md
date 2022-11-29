@@ -1,5 +1,5 @@
 ---
-title: Crockpot Meatballs
+title: Crockpot Smokies
 tags: ['Parties', 'Appetizers']
 date: 2022-04-19
 author: "Jason Ross"
