@@ -59,16 +59,7 @@ const NavBar = styled.nav`
     .menu {
       display: none;
   }
-  .logo {
-    text-align: center;
-    margin: auto;
-    
-  }
 
-  .logo a {
-    text-align: center;
-    margin: auto;
-  }
 `
 
 const MenuIcon = styled.button`

@@ -16,6 +16,7 @@ const WrapperStyles = styled.div`
 `
 
 const ContentStyles = styled.div`
+  margin-bottom: 100px;
   padding-left: 3rem;
   padding-right: 3rem;
   * {
@@ -42,6 +43,7 @@ const ContentStyles = styled.div`
     .flex-container {
       flex-direction: column;
     }
+    margin-bottom: 100px;
   }
 `
 
