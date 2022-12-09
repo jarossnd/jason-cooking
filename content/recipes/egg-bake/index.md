@@ -5,6 +5,8 @@ date: 2022-12-08
 author: "Jason Ross"
 ---
 
+![An image of egg bake](/egg-bake.png)
+
 ## Ingredients
 
 - 2 lbs pork sausage
