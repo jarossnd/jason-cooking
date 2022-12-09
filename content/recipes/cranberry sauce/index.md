@@ -1,6 +1,6 @@
 ---
 title: Cranberry Sauce
-tags: ["Sauces", "Thanksgiving", "Sides"]
+tags: ["Sauces", "Thanksgiving", "Sides", "Holidays"]
 date: 2022-12-08
 author: "Jason Ross"
 ---
