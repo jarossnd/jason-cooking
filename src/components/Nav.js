@@ -50,15 +50,25 @@ const NavBar = styled.nav`
     z-index: 1;
   }
   
-  @media screen and (max-width: 760px) {
-    .menu {
-      display: none;
-  }
-
+  
   .logo a {
     font-size: 4rem;
   }
+  
+  @media screen and (max-width: 950px) {
+    .menu {
+      display: none;
+  }
+  .logo {
+    text-align: center;
+    margin: auto;
+    
+  }
 
+  .logo a {
+    text-align: center;
+    margin: auto;
+  }
 `
 
 const MenuIcon = styled.button`
@@ -96,7 +106,7 @@ const MenuIcon = styled.button`
       transform: ${({ nav }) => (nav ? 'rotate(-45deg);' : 'rotate(0)')};
     }
   }
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 950px) {
     display: flex;
   }
 `

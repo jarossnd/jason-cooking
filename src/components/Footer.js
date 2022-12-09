@@ -2,10 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterStyles = styled.div`
-  padding-left: 5rem;
-  padding-right: 5rem;
-  margin-left: auto;
-  margin-right: auto;
+  footer {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 
   footer p {
     text-align: center;

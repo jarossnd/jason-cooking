@@ -1,6 +1,6 @@
 ---
 title: Spicy Taco Cheese Dip
-tags: ['Mexican', 'Parties', 'Appetizers']
+tags: ["Mexican", "Parties", "Appetizers"]
 date: 2022-04-16
 author: "Jason Ross"
 ---
@@ -14,7 +14,7 @@ I always requests for the recipe on this one. You can turn up the heat as much a
 - 1 large (or 2 small) jalapeños, seeded and finely minced
 - 2/3 cup water
 - Taco seasoning mix (use packaging instructions for how much)
-- 2 32 ounces Velveeta cheese, cut into cubes
+- 1 32 ounces Velveeta cheese, cut into cubes (I normally use 2-32 ounces for larger parties)
 - 2 (10-ounce) cans Rotel
 
 ## Directions
@@ -24,4 +24,4 @@ I always requests for the recipe on this one. You can turn up the heat as much a
 
 ## Notes
 
-I typically use 1 hot and 1 original cans of Rotel.
+- I typically use 1 hot and 1 original cans of Rotel.

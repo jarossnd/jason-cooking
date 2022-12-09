@@ -9,12 +9,47 @@ import styled from 'styled-components'
 import SEO from '../components/SEO'
 
 const TopicStyles = styled.div`
-  a {
-    font-size: 3rem;
-  }
-  ul {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu > li {
+    margin: 15px;
+    border-style: solid;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--orange);
+    background-color: var(--blue);
+    min-width: 200px;
     text-align: center;
+    display: inline-block;
+  }
+  .menu > li a {
+    display: block;
+  }
+  .menu > li:hover {
+    margin: 15px;
+    border-style: solid;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: var(--black);
+  }
+  .menu a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  .menu a:hover {
+    color: var(--orange);
+  }
+  @media screen and (max-width: 950px) {
+    .menu > li {
+      width: 100%;
   }
 `
 
@@ -32,13 +67,12 @@ const TagsPage = ({
       <h1>Categories</h1>
       <TopicStyles>
         <div className="container">
-          <ul>
+          <ul className="menu">
             {group.map(tag => (
               <li key={tag.fieldValue}>
                 <Link to={`/categories/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue}{' '}
+                  {tag.fieldValue} ({tag.totalCount})
                 </Link>
-                ({tag.totalCount})
               </li>
             ))}
           </ul>

@@ -34,7 +34,6 @@ const GlobalStyles = createGlobalStyle`
     }
 
     footer {
-        padding: 5rem;
         font-size: 5rem;
         background-color: var(--tan);
       }

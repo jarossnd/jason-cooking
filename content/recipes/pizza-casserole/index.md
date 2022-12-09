@@ -1,6 +1,6 @@
 ---
 title: Pizza Casserole
-tags: ['Italian', 'Pizza', 'Dinner']
+tags: ["Italian", "Pizza", "Dinner", "Casserole"]
 date: 2022-04-18
 author: "Jason Ross"
 ---

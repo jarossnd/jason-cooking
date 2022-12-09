@@ -25,6 +25,12 @@ const HomeStyles = styled.div`
     padding: 10px;
     color: var(--orange);
     background-color: var(--blue);
+    min-width: 200px;
+    text-align: center;
+    display: inline-block;
+  }
+  .menu > li a {
+    display: block;
   }
   .menu > li:hover {
     margin: 15px;
@@ -40,6 +46,10 @@ const HomeStyles = styled.div`
   }
   .menu a:hover {
     color: var(--orange);
+  }
+  @media screen and (max-width: 950px) {
+    .menu > li {
+      width: 100%;
   }
 `
 

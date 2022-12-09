@@ -12,6 +12,7 @@ const WrapperStyles = styled.div`
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  height: 100vh;
 `
 
 const ContentStyles = styled.div`
@@ -37,7 +38,7 @@ const ContentStyles = styled.div`
     flex: 50%;
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 950px) {
     .flex-container {
       flex-direction: column;
     }
