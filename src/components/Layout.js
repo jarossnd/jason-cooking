@@ -43,7 +43,7 @@ const ContentStyles = styled.div`
     .flex-container {
       flex-direction: column;
     }
-    margin-bottom: 125px;
+    margin-bottom: 50px;
   }
 `
 

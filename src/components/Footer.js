@@ -5,7 +5,7 @@ const FooterStyles = styled.div`
   footer {
     margin-left: auto;
     margin-right: auto;
-    position: fixed;
+
     bottom: 0;
     width: 100%;
   }

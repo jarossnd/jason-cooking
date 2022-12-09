@@ -4,7 +4,14 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-const TopicStyles = styled.div``
+const TopicStyles = styled.div`
+  li {
+    text-align: center;
+  }
+  li a {
+    font-size: 4rem;
+  }
+`
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -24,16 +31,14 @@ const Tags = ({ pageContext, data }) => {
           const { date } = node.frontmatter
           const { description } = node.frontmatter
           return (
-            <li key={slug}>
-              <TopicStyles>
-                <h2>
-                  <Link to={slug}>{title}</Link>
-                </h2>
+            <TopicStyles>
+              <li key={slug}>
+                <Link to={slug}>{title}</Link>
                 <section>
                   <p>{description}</p>
                 </section>
-              </TopicStyles>
-            </li>
+              </li>
+            </TopicStyles>
           )
         })}
       </ol>
