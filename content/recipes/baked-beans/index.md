@@ -1,6 +1,6 @@
 ---
 title: Baked Beans
-tags: ['Sides', 'BBQ']
+tags: ["Sides", "BBQ", "Beans"]
 date: 2022-04-19
 author: "Jason Ross"
 ---

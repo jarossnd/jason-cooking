@@ -1,11 +1,11 @@
 ---
 title: Sweet Meet Loaf
-tags: ['Dinner', 'Beef']
+tags: ["Dinner", "Beef"]
 date: 2022-04-16
 author: "Jason Ross"
 ---
 
-One of my favorite meet loaf recipes. The brownsugar and ginger are the key secrets to this family favorite.
+One of my favorite meet loaf recipes. The brown sugar and ginger are the key secrets to this family favorite.
 
 ## Ingredients
 
