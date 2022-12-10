@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     html {
         font-size 8px;
         background-color: var(--tan);
+
     }
     body {
         font-family: 'Open Sans', sans-serif;
@@ -21,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+
     }
     h1 {
         text-align: center;

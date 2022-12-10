@@ -3,7 +3,11 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/SEO'
 
-const RecipeStyle = styled.div``
+const RecipeStyle = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+`
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
