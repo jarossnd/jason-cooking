@@ -1,5 +1,5 @@
 ---
-title: Cheesy Chicken Casserole
+title: Cheesy Rotisery Chicken Casserole
 tags: ['Casserole', 'Chicken']
 date: 2022-04-19
 author: "Jason Ross"
@@ -19,7 +19,7 @@ source: "https://www.spendwithpennies.com/cheesy-chicken-casserole"
 - 3 cups sharp cheddar cheese shredded, divided
 - ⅓ cup parmesan cheese shredded
 - 4 ounces mild green chiles
-- 3 cups cooked chicken
+- 1 Rotisery Chicken, 3 cups (or a little better than), shredded
 
 ## Directions
 
