@@ -34,6 +34,7 @@ const NavBar = styled.nav`
   }
 
   .logo {
+    
     font-size: 5rem;
     color: var(--tan);
   }
@@ -53,11 +54,21 @@ const NavBar = styled.nav`
   
   .logo a {
     font-size: 4rem;
+    vertical-align: middle;
   }
   
   @media screen and (max-width: 950px) {
     .menu {
       display: none;
+  }
+
+  @media screen and (max-width: 400px) {
+    .menu {
+      display: none;
+  }
+
+  .logo a {
+    font-size: 3.5rem;
   }
 
 `

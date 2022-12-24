@@ -7,6 +7,30 @@ const RecipeStyle = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 1000px;
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+  @media screen and (max-width: 950px) {
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+  }
 `
 
 const BlogPostTemplate = ({ data, location }) => {
