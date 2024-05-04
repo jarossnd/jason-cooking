@@ -1,5 +1,5 @@
 ---
-title: Sloppy Joes 2
+title: Sloppy Joes Grandma Eunice
 tags: ['Beef', 'Dinner']
 date: 2024-05-04
 author: "Jason Ross"
