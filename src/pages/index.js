@@ -47,6 +47,9 @@ const HomeStyles = styled.div`
   .menu a:hover {
     color: var(--orange);
   }
+  p {
+    text-align: center;
+  }
   @media screen and (max-width: 950px) {
     .menu > li {
       width: 100%;
