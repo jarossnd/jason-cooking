@@ -19,8 +19,6 @@ const HomeStyles = styled.div`
   }
   .menu > li {
     margin: 15px;
-    border-style: solid;
-    border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
     color: var(--orange);
@@ -34,8 +32,6 @@ const HomeStyles = styled.div`
   }
   .menu > li:hover {
     margin: 15px;
-    border-style: solid;
-    border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
     border-color: var(--black);
