@@ -1,6 +1,6 @@
 ---
 title: Angel Pie
-tags: ['fruit', 'fiber', breakfast']
+tags: ['fruit', 'fiber', 'breakfast']
 date: 2024-12-15
 author: "Jason Ross"
 ---
