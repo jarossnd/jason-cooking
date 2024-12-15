@@ -9,7 +9,8 @@ author: "Jason Ross"
 
 - 1 cup sugar
 - 1 cup water
-- 4 cups (one 12-ounce package) fresh or frozen cranberries
+- 4 cups of fresh or 1 12-oz package of frozen cranberries
+- Optional additions: Pecans, orange zest, raisins, blueberries, cinnamon, nutmeg, allspice
 
 ## Directions
 
@@ -18,5 +19,3 @@ author: "Jason Ross"
 3. Add the cranberries to the pot and return to a boil. Lower the heat and simmer for 10 minutes or until most of the cranberries have burst.
 4. Once the cranberries have burst you can leave the cranberry sauce as is, or dress it up with other ingredients. We like to mix in a half a cup of chopped pecans a pinch or two of orange zest.
 5. Remove the pot from heat. Let cool completely at room temperature, then transfer to a bowl to chill in the refrigerator. Note that the cranberry sauce will continue to thicken as it cools.
-
-## Notes
