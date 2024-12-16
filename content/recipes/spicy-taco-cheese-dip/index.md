@@ -5,7 +5,7 @@ date: 2022-04-16
 author: "Jason Ross"
 ---
 
-I always requests for the recipe on this one. You can turn up the heat as much as you like by adjusting the jalapeños and the types of Rotel you use.
+When I bring this dip to a party, people always ask for the recipe. You can turn up the heat as much as you like by adjusting the jalapeños and the types of Rotel you use.
 
 ## Ingredients
 

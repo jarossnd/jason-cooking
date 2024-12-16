@@ -24,7 +24,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <div className="item1">
       <h1>{tagTitle}</h1>
-      <ol style={{ listStyle: `none` }}>
+      <span style={{ listStyle: `none` }}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
@@ -41,7 +41,7 @@ const Tags = ({ pageContext, data }) => {
             </TopicStyles>
           )
         })}
-      </ol>
+      </span>
       {/*
               This links to a page that does not yet exist.
               You'll come back to it!

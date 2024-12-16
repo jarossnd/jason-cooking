@@ -67,7 +67,7 @@ const HomePage = ({
         <h1>Welcome</h1>
         <p>
           Welcome to Jason's Cookbook! This site contains my recipes that I have
-          obtained over the years. Select a category below to explore:
+          obtained over the years. Select a category below to get started.
         </p>
         <div className="container">
           <ul className="menu">

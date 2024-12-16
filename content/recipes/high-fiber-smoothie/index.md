@@ -1,6 +1,6 @@
 ---
-title: Angel Pie
-tags: ['fruit', 'fiber', 'breakfast']
+title: High Fiber Smoothie
+tags: ['Fruit', 'Fiber', 'Breakfast']
 date: 2024-12-15
 author: "Jason Ross"
 ---

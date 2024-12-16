@@ -17,14 +17,14 @@ const NavBar = styled.nav`
     padding-right: 3rem;
     padding-bottom: 3rem;
     padding-left: 3rem;
-    font-size: 5rem;
+    font-size: 4rem;
     background-color var(--blue);
   }
 
   a {
     text-decoration: none;
     color: var(--tan);
-    font-size: 5rem;
+    font-size: 4rem;
     transition: color 300ms;
 
     :hover {
@@ -35,7 +35,7 @@ const NavBar = styled.nav`
 
   .logo {
     
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--tan);
   }
 

@@ -19,7 +19,7 @@ author: "Jordan Ross"
 
 ## Directions
 
-1.	Heat oven to 350deg; F.
+1.	Heat oven to 350&deg; F.
 2.	Butter an 8x4 inch loaf pan.
 3.	In a mixing bowl, mash bananas with a fork until smooth.
 4.	Stir the melted butter into the mashed bananas.

@@ -61,6 +61,7 @@ const TagsPage = ({
     <SEO title="Categories" />
     <div className="item1">
       <h1>Categories</h1>
+      <p>You will find a list of receipe categories below. Select a category below to get started.</p>
       <TopicStyles>
         <div className="container">
           <ul className="menu">
