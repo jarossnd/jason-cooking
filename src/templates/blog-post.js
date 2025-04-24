@@ -7,6 +7,7 @@ const RecipeStyle = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 1000px;
+
   h1 {
     font-size: 6rem;
   }
@@ -14,6 +15,7 @@ const RecipeStyle = styled.div`
   h2 {
     font-size: 5rem;
   }
+
   @media screen and (max-width: 950px) {
     h1 {
       font-size: 5rem;
@@ -30,6 +32,40 @@ const RecipeStyle = styled.div`
     h2 {
       font-size: 3rem;
     }
+  }
+
+  .blog-post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #007acc;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  header p {
+    text-align: center;
+    font-size: 2rem; /* 1 rem smaller than the default */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ingredients, .instructions {
+    margin: 2rem 0;
+  }
+
+  .ingredients ul, .instructions ol {
+    padding-left: 1.5rem;
+  }
+
+  .ingredients li, .instructions li {
+    margin-bottom: 0.5rem;
   }
 `
 
@@ -70,6 +106,7 @@ const BlogPostTemplate = ({ data, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
+          <button onClick={() => window.print()}>Print Recipe</button>
         </article>
         <nav className="blog-post-nav">
           {previous && (

@@ -8,11 +8,11 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/SEO'
 
-const TopicStyles = styled.div`
+const HomeStyles = styled.div`
   .menu {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -20,34 +20,41 @@ const TopicStyles = styled.div`
   .menu > li {
     margin: 15px;
     border-radius: 10px;
-    padding: 10px;
-    color: var(--orange);
+    padding: 20px;
+    color: var(--white);
     background-color: var(--blue);
-    min-width: 200px;
+    width: 200px;
+    height: 200px;
     text-align: center;
-    display: inline-block;
-  }
-  .menu > li a {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   .menu > li:hover {
-    margin: 15px;
-    border-radius: 10px;
-    padding: 10px;
-    border-color: var(--black);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
-  .menu a {
+  .menu > li a {
     text-decoration: none;
     color: var(--white);
+    font-size: 3rem;
+    font-weight: bold;
   }
-  .menu a:hover {
+  .menu > li .count {
+    margin-top: 10px;
+    font-size: 2rem;
     color: var(--orange);
   }
   @media screen and (max-width: 950px) {
     .menu > li {
       width: 100%;
+      height: auto;
+    }
   }
-`
+`;
 
 const TagsPage = ({
   data: {
@@ -78,7 +85,7 @@ const TagsPage = ({
     <div className="item1">
       <h1>Categories</h1>
       <p>You will find a list of recipes categories below. Select a category below to get started.</p>
-      <TopicStyles>
+      <HomeStyles>
         <div className="container">
           <ul className="menu">
             {group.map(tag => (
@@ -87,13 +94,14 @@ const TagsPage = ({
                   to={`/categories/${kebabCase(tag.fieldValue)}/`}
                   aria-label={`View recipes in ${tag.fieldValue}`}
                 >
-                  {tag.fieldValue} ({tag.totalCount})
+                  {tag.fieldValue}
                 </Link>
+                <span className="count">{tag.totalCount} recipes</span>
               </li>
             ))}
           </ul>
         </div>
-      </TopicStyles>
+      </HomeStyles>
     </div>
   </>
 )

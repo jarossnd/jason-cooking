@@ -11,8 +11,8 @@ import SEO from '../components/SEO'
 const HomeStyles = styled.div`
   .menu {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -20,39 +20,41 @@ const HomeStyles = styled.div`
   .menu > li {
     margin: 15px;
     border-radius: 10px;
-    padding: 10px;
-    color: var(--orange);
+    padding: 20px;
+    color: var(--white);
     background-color: var(--blue);
-    min-width: 200px;
+    width: 200px;
+    height: 200px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .menu > li a {
-    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   .menu > li:hover {
-    margin: 15px;
-    border-radius: 10px;
-    padding: 10px;
-    border-color: var(--black);
+    transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
-  .menu a {
+  .menu > li a {
     text-decoration: none;
     color: var(--white);
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
   }
-  .menu a:hover {
+  .menu > li .count {
+    margin-top: 10px;
+    font-size: 2rem; /* Increased font size */
     color: var(--orange);
-  }
-  p {
-    text-align: center;
   }
   @media screen and (max-width: 950px) {
     .menu > li {
       width: 100%;
+      height: auto;
+    }
   }
-`
+`;
 
 const HomePage = ({
   data: {
@@ -92,6 +94,7 @@ const HomePage = ({
                   <Link to={`/categories/${kebabCase(tag.fieldValue)}/`} aria-label={`View recipes in ${tag.fieldValue}`}>
                     {tag.fieldValue}
                   </Link>
+                  <span className="count">{tag.totalCount} recipes</span>
                 </li>
               ))}
             </ul>
