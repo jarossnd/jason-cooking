@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Bio from '../components/bio'
 import SEO from '../components/SEO'
+import { Helmet } from 'react-helmet'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -13,9 +14,7 @@ const BlogIndex = ({ data, location }) => {
         <Seo title="All posts" />
         <Bio />
         <p>
-          No recipes posts found. Add markdown posts to "content/recipe" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No recipes found. Check back later or explore our <Link to="/">homepage</Link> for more content!
         </p>
       </div>
     )
@@ -24,8 +23,37 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div location={location} title={siteTitle}>
       <SEO title="Recipes" />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Jason's Cookbook Recipes",
+            description: "A collection of recipes from Jason's Cookbook.",
+            url: "https://jason.cooking/recipes",
+            blogPost: posts.map(post => ({
+              "@type": "BlogPosting",
+              headline: post.frontmatter.title,
+              datePublished: post.frontmatter.date,
+              description: post.frontmatter.description || post.excerpt,
+              url: `https://jason.cooking${post.fields.slug}`,
+            })),
+          })}
+        </script>
+      </Helmet>
       <h1>Latest Recipes</h1>
-      <ol style={{ listStyle: `none` }}>
+      {posts.length > 0 && (
+        <div className="featured-recipe">
+          <h2>Featured Recipe</h2>
+          <article>
+            <h3>
+              <Link to={posts[0].fields.slug}>{posts[0].frontmatter.title}</Link>
+            </h3>
+            <p>{posts[0].frontmatter.description || posts[0].excerpt}</p>
+          </article>
+        </div>
+      )}
+      <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', listStyle: 'none' }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -38,7 +66,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={post.fields.slug} itemProp="url" aria-label={`Read more about ${post.frontmatter.title}`}>
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
@@ -51,6 +79,15 @@ const BlogIndex = ({ data, location }) => {
                     }}
                     itemProp="description"
                   />
+                  {post.frontmatter.tags && (
+                    <p>
+                      Tags: {post.frontmatter.tags.map(tag => (
+                        <Link key={tag} to={`/tags/${tag}/`} style={{ marginRight: '5px' }}>
+                          {tag}
+                        </Link>
+                      ))}
+                    </p>
+                  )}
                 </section>
               </article>
             </li>

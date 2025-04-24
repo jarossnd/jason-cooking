@@ -26,6 +26,7 @@ const HomeStyles = styled.div`
     min-width: 200px;
     text-align: center;
     display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .menu > li a {
     display: block;
@@ -35,6 +36,7 @@ const HomeStyles = styled.div`
     border-radius: 10px;
     padding: 10px;
     border-color: var(--black);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
   .menu a {
     text-decoration: none;
@@ -61,7 +63,18 @@ const HomePage = ({
   },
 }) => (
   <>
-    <SEO title="Home" />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Jason's Cookbook",
+          description: "Explore a variety of recipes categorized for easy navigation.",
+          url: "https://jason.cooking",
+        })}
+      </script>
+    </Helmet>
+    <SEO title="Home" description="Explore Jason's Cookbook with a variety of recipes categorized for easy navigation." />
     <div className="item1">
       <HomeStyles>
         <h1>Welcome</h1>
@@ -70,15 +83,19 @@ const HomePage = ({
           obtained over the years. Select a category below to get started.
         </p>
         <div className="container">
-          <ul className="menu">
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <Link to={`/categories/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {!group ? (
+            <p>Loading categories...</p>
+          ) : (
+            <ul className="menu">
+              {group.map(tag => (
+                <li key={tag.fieldValue}>
+                  <Link to={`/categories/${kebabCase(tag.fieldValue)}/`} aria-label={`View recipes in ${tag.fieldValue}`}>
+                    {tag.fieldValue}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </HomeStyles>
     </div>

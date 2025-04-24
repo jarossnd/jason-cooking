@@ -52,7 +52,9 @@ export default function Layout({ children }) {
     <WrapperStyles>
       <GlobalStyles />
       <Nav />
-      <ContentStyles>{children}</ContentStyles>
+      <main>
+        <ContentStyles>{children}</ContentStyles>
+      </main>
       <Footer />
     </WrapperStyles>
   )

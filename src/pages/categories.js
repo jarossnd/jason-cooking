@@ -59,15 +59,34 @@ const TagsPage = ({
 }) => (
   <>
     <SEO title="Categories" />
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Recipe Categories",
+          description: "Browse a variety of recipe categories from Jason's Cookbook.",
+          url: "https://jason.cooking/categories",
+          hasPart: group.map(tag => ({
+            "@type": "CreativeWork",
+            name: tag.fieldValue,
+            url: `https://jason.cooking/categories/${kebabCase(tag.fieldValue)}/`,
+          })),
+        })}
+      </script>
+    </Helmet>
     <div className="item1">
       <h1>Categories</h1>
-      <p>You will find a list of receipe categories below. Select a category below to get started.</p>
+      <p>You will find a list of recipes categories below. Select a category below to get started.</p>
       <TopicStyles>
         <div className="container">
           <ul className="menu">
             {group.map(tag => (
               <li key={tag.fieldValue}>
-                <Link to={`/categories/${kebabCase(tag.fieldValue)}/`}>
+                <Link
+                  to={`/categories/${kebabCase(tag.fieldValue)}/`}
+                  aria-label={`View recipes in ${tag.fieldValue}`}
+                >
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>
               </li>

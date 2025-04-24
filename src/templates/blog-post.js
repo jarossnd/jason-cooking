@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/SEO'
 
@@ -43,7 +43,19 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-      />
+      >
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.frontmatter.title,
+            datePublished: post.frontmatter.date,
+            description: post.frontmatter.description || post.excerpt,
+            articleBody: post.html,
+            url: location.href,
+          })}
+        </script>
+      </SEO>
       <RecipeStyle>
         <article
           className="blog-post"
@@ -52,12 +64,25 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.date}</p>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
         </article>
+        <nav className="blog-post-nav">
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </nav>
       </RecipeStyle>
     </div>
   )

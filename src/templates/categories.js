@@ -33,7 +33,9 @@ const Tags = ({ pageContext, data }) => {
           return (
             <TopicStyles>
               <li key={slug}>
-                <Link to={slug}>{title}</Link>
+                <Link to={slug} aria-label={`Read more about ${title}`}>
+                  {title}
+                </Link>
                 <section>
                   <p>{description}</p>
                 </section>
